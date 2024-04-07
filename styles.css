@@ -36,6 +36,7 @@ main{
     padding:3px 20px;
     font-family: 'Courier New', Courier, monospace;
     width:300px;
+    color:#000;
 }
 
 #submit-btn{
