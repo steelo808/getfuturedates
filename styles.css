@@ -7,5 +7,62 @@
 body{
     line-height:1.3;
     font-size:100%;
+    background-color: #006491;
+    color:#FFFFFF;
+    position:relative;
+    height:100vh;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+#logo{
+    padding:20px;
+}
+#title{
+    font-size:3rem;
+    text-align:center;
+    letter-spacing: 1px;
 }
 
+main{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    display:flex;
+    flex-direction:row;
+    gap:3px;
+}
+
+#current-date{
+    padding:3px 20px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#submit-btn{
+    background-color: #e31837;
+    color:#FFFFFF;
+    border:none;
+    border-radius:5px;
+    padding:3px 20px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-transform: uppercase;
+    letter-spacing:1px;
+    cursor:pointer;
+}
+
+
+
+@media only screen and (max-width:530px){
+    
+    #title{
+        font-size:1.7rem;
+    }
+    
+    main{
+        display:flex;
+        flex-direction:column;
+    }
+
+    #submit-btn{
+        width: 100%;
+    }
+}
