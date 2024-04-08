@@ -3,7 +3,9 @@ console.log("javascript connected successfully")
 
 // connecting to DOM
 
-const getExpirationDates = () =>{
+
+
+const getExpirationDates = (inputValue) =>{
     //convert input date string to Date object
 
     let expirationDateObj = new Date(inputValue);
@@ -16,18 +18,18 @@ const getExpirationDates = () =>{
         '30 days':new Date(expirationDateObj.getTime() + 30 * 24 * 60 * 60 * 1000)
     };
 
-    for(const[key,value] of Object.entries(formattedExpirationDates)){
-        formattedExpirationDates[key] = value.toLocaleDateString('en-us', {weekday:'long', month:'long', year:'numeric' });
+    for(const[key, value] of Object.entries(formattedExpirationDates)){
+        formattedExpirationDates[key] = value.toLocaleDateString('en-us', {day: 'numeric', weekday:'long', month:'long', year:'numeric' });
     }
 
     return formattedExpirationDates;
 };
 
-const displayExpirationDates = (event) =>{
-    event.preventDefault();
-    
+const displayExpirationDates = () =>{ 
+    let date = document.querySelector('#current-date');
+    let selectedDateValue = date.value;
     try{
-        const expirationDates = getExpirationDates(inputValue);
+        const expirationDates = getExpirationDates(selectedDateValue);
         const outputDiv = document.querySelector('#expirationDateOutput');
         outputDiv.innerHTML = '';
         
@@ -38,13 +40,16 @@ const displayExpirationDates = (event) =>{
     }catch (error){
         alert(`This is whats going wrong: ${error}`)
     }
+
+    document.querySelector("#submit-btn").addEventListener('click',displayExpirationDates)
+    
+    
+
+   
 }
-const inputValue = document.querySelector("#current-date").value;
-document.querySelector("#submit-btn").addEventListener('click', () =>{
-    console.log(inputValue)
-})
 
 
+displayExpirationDates()
 
 
 

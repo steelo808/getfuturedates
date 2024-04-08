@@ -53,7 +53,14 @@ main{
     cursor:pointer;
 }
 
+#expirationDateOutput{
+    margin-top:10px;
+    text-align:center;
+}
 
+#expirationDateOutput h3{
+    margin-bottom: 10px;
+}
 
 @media only screen and (max-width:530px){
     
