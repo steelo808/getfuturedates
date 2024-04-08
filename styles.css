@@ -28,7 +28,7 @@ main{
     left:50%;
     transform: translate(-50%, -50%);
     display:flex;
-    flex-direction:row;
+    flex-direction:column;
     gap:3px;
 }
 
@@ -51,15 +51,16 @@ main{
     text-transform: uppercase;
     letter-spacing:1px;
     cursor:pointer;
+    height:50px;
 }
 
 #expirationDateOutput{
     margin-top:10px;
-    text-align:center;
 }
 
 #expirationDateOutput h3{
     margin-bottom: 10px;
+    text-align: center;
 }
 
 @media only screen and (max-width:530px){
@@ -75,6 +76,5 @@ main{
 
     #submit-btn{
         width: 100%;
-        height:50px;
     }
 }
